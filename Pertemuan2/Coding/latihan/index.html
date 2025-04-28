@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafly Akbar Ravsanjani - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0d6efd;
+            --secondary-color: #6c757d;
+            --dark-color: #343a40;
+            --light-color: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+        }
+        
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #0072ff 0%, #00c6ff 100%);
+            color: white;
+            padding: 80px 0;
+            margin-bottom: 30px;
+        }
+        
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .profile-img:hover {
+            transform: scale(1.05);
+        }
+        
+        .section-title {
+            position: relative;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        .about-section, .skills-section, .contact-section {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .social-links a {
+            color: var(--dark-color);
+            margin: 0 10px;
+            font-size: 24px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--primary-color);
+            transform: translateY(-5px);
+        }
+        
+        .skill-item {
+            margin-bottom: 20px;
+        }
+        
+        .progress {
+            height: 10px;
+            border-radius: 5px;
+            background-color: #e9ecef;
+        }
+        
+        .progress-bar {
+            border-radius: 5px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .contact-item i {
+            font-size: 20px;
+            width: 40px;
+            color: var(--primary-color);
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+        
+        .btn-custom {
+            border-radius: 30px;
+            padding: 8px 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .card {
+            border: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <span class="text-primary">R</span>afly
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center" id="home">
+        <div class="container">
+            <img src="../assets/logo-esa-unggul.png" alt="Rafly Akbar Ravsanjani" class="rounded-circle profile-img mb-4">
+            <h1 class="display-4 fw-bold mb-3">Rafly Akbar Ravsanjani</h1>
+            <p class="lead mb-4">Teknik Informatika | Fakultas Ilmu Komputer</p>
+            <div class="d-flex justify-content-center">
+                <button type="button" class="btn btn-light btn-custom me-2">
+                    <i class="fas fa-map-marker-alt me-2"></i>Tangerang
+                </button>
+                <button type="button" class="btn btn-outline-light btn-custom">
+                    <i class="far fa-calendar-alt me-2"></i>01 January 2024
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- End Hero Section -->
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Saya adalah mahasiswa Teknik Informatika di Universitas Esa Unggul yang memiliki passion mendalam terhadap dunia teknologi dan pengembangan web. Dengan semangat belajar yang tinggi, saya terus mengembangkan keterampilan coding dan desain untuk menciptakan solusi digital yang inovatif.</p>
+                <p>Sebagai anak yang berbakti pada orang tua, saya menjadikan mereka sebagai inspirasi utama dalam mengejar cita-cita. Nilai-nilai kerja keras, integritas, dan dedikasi yang mereka ajarkan menjadi fondasi saya dalam menghadapi tantangan akademis maupun profesional. Salah satu motivasi terbesar saya adalah dapat membanggakan mereka melalui pencapaian di bidang teknologi.</p>
+                <p>Di luar kegiatan akademik, saya aktif mengikuti perkembangan teknologi terbaru dan berpartisipasi dalam berbagai proyek pengembangan web. Saya percaya bahwa kombinasi antara pendidikan formal di Universitas Esa Unggul dan pembelajaran mandiri akan membuka lebih banyak peluang di masa depan. Komitmen saya adalah terus mengasah kemampuan teknis sambil menjunjung tinggi nilai-nilai keluarga dan berkontribusi positif bagi masyarakat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End About Section -->
+
+    <!-- Skills Section -->
+    <section class="skills-section" id="skills">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="skill-item">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span class="fw-bold">HTML</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-primary" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="skill-item">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span class="fw-bold">CSS</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="skill-item">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span class="fw-bold">Laravel</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="skill-item">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span class="fw-bold">Bootstrap</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Skills Section -->
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title mb-4">Contact Info</h5>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>raflyravsanjani@gmail.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+62 895 0834 3263</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Tangerang, Indonesia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title mb-4">Social Links</h5>
+                            <div class="d-flex flex-column">
+                                <a href="https://Rafly1818.github.io" target="_blank" class="text-decoration-none mb-3">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-globe me-3 text-primary"></i>
+                                        <span>Personal Website</span>
+                                    </div>
+                                </a>
+                                <a href="https://instagram.com/flyyr_" target="_blank" class="text-decoration-none mb-3">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fab fa-instagram me-3 text-danger"></i>
+                                        <span>Instagram</span>
+                                    </div>
+                                </a>
+                                <a href="https://github.com/Rafly1818" target="_blank" class="text-decoration-none">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fab fa-github me-3 text-dark"></i>
+                                        <span>GitHub</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Contact Section -->
+
+    <!-- Footer -->
+    <footer class="text-center py-4">
+        <div class="container">
+            <div class="social-links mb-4">
+                <a href="https://Rafly1818.github.io" target="_blank"><i class="fas fa-globe"></i></a>
+                <a href="https://instagram.com/flyyr_" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/Rafly1818" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="mb-0">&copy; 2024 Rafly Akbar Ravsanjani. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script>
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Active nav item on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
