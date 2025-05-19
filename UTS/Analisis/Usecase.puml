@@ -1,0 +1,32 @@
+@startuml usecase
+actor Mekanik
+actor Admin
+actor Pelanggan
+
+rectangle "Sistem Manajemen Bengkel" {
+    (Login)
+    (Lihat Daftar Pelanggan)
+    (Lihat Daftar Kendaraan)
+    (Lihat Daftar Servis)
+    (Mendaftarkan Pelanggan)
+    (Mendaftarkan Kendaraan)
+    (Mendaftarkan Jadwal Servis)
+}
+
+Mekanik --> (Login)
+Mekanik --> (Lihat Daftar Pelanggan)
+Mekanik --> (Lihat Daftar Kendaraan)
+Mekanik --> (Lihat Daftar Servis)
+
+Pelanggan --> (Login)
+Pelanggan --> (Lihat Daftar Kendaraan)
+Pelanggan --> (Lihat Daftar Servis)
+
+Admin --> (Login)
+Admin --> (Lihat Daftar Pelanggan)
+Admin --> (Lihat Daftar Kendaraan)
+Admin --> (Lihat Daftar Servis)
+Admin --> (Mendaftarkan Pelanggan)
+Admin --> (Mendaftarkan Kendaraan)
+Admin --> (Mendaftarkan Jadwal Servis)
+@enduml
